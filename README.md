@@ -1,47 +1,78 @@
-Projeto de Campeonato E-Sports
+# Projeto de Campeonato E-Sports
 
-Integrantes:
+## Integrantes
+
 - Christian Otto Ricarth (10253902)
 - Felipe Negreiros Souza (10771620)
 - João Manoel Pessoa Carneiro (10771808)
 - Lucas Prado Fernandes Cardozo (10771939)
 
-Descrição e principais funcionalidades:
+## Descrição e principais funcionalidades
 
-Organizar e definir os jogos, equipes, jogadores de cada equipe, pontuações, partidas e pontos do campeonato. Vai poder visualizar as tabelas de pontuação, equipes e a estrutura do campeonato como um todo, cadastrar os jogadores nas equipes, definir qual jogo e qual partida será realizada e montar as partidas pra um campeonato, o tipo de campeonato foi escolhido por pontos corridos (mais eficientes para aplicar matrizes e buscas).
+O projeto consiste no desenvolvimento de um sistema para organizar e gerenciar um campeonato de E-Sports no formato de pontos corridos.
 
-Algoritmos implementados:
+O sistema tem como objetivo permitir o cadastro e gerenciamento de jogadores e equipes, organização de partidas, definição de jogos e controle da pontuação do campeonato.
 
-Linguagem C (projeto todo);
-Structs e arrays(vetores) (para cadastro de jogadores, formação de partidas, definição de jogo, preenchimento de critérios);
-Validações (para todos os dados inseridos nos campos corretos ou não);
-Buscas linear, binária (para selecionar e puxar os dados pedidos);  
-Matriz ou estrutura parecida (cálculo de pontuação do time talvez);
-Ordenação bubble (para percorrer vetores que armazenem dados ou estatísticas do jogador e organiza as tabelas);
-Ir colocando aqui quando for fazendo o projeto...
+Entre as principais funcionalidades previstas estão:
 
-Banco de dados e bilbioteca/driver escolhido:
+- Cadastro e consulta de jogadores.
+- Cadastro e gerenciamento de equipes.
+- Associação de jogadores às equipes.
+- Registro e organização de partidas.
+- Controle de resultados e pontuação.
+- Exibição da classificação das equipes.
+- Busca e ordenação de informações do campeonato.
 
-Banco criado usando MySQL, e MYSQL Conncetor/C
+## Algoritmos implementados
 
-Justificativa pra escolha desse banco ou biblioteca:
+- **Linguagem C:** utilizada no desenvolvimento do projeto.
+- **Estruturas e vetores:** utilizados para armazenar informações de jogadores, equipes e partidas.
+- **Validações de entrada:** funções para verificar os dados inseridos, evitando campos vazios e valores inválidos.
+- **Busca linear:** utilizada para localizar jogadores pelo nickname e equipes pelo nome.
+- **Busca binária:** prevista para localizar informações de forma otimizada.
+- **Ordenação bolha:** prevista para organizar dados e auxiliar na apresentação das classificações.
+- **Matrizes e estruturas:** utilizadas na organização e no processamento das informações do campeonato.
 
-Informar quando for fazendo o projeto..
+## Banco de dados e biblioteca/driver escolhido
 
-Estrutura de tabelas:
+- **Banco de dados:** MySQL.
+- **Biblioteca/driver:** MySQL Connector/C.
+- **Linguagem de integração:** C.
 
-Entidades (Jogador, Equipe, Partida, Criterios_pontuacao, Jogo, Campenato);
-jogador (CPF_id, nome completo, apelido, conta steam, telefone, funcao);
-Equipe (id_equipe, nome, FK CPF_jogador, numero_jogadores, pontuacao);
-Partida (FK id_equipes, id_partida, num_rodada, id_jogo);
-Jogo (id_jogo, nome, desenvolvedora, tipo_jogo);
-Criterios_pontuacao (vitoria, derrota, empate, num_kills, num_mortes, dano_cura_realizados);
-Campeonato (nome, quant_partidas, quant_equipes, formato, FK id_partidas, FK id_equipes);
+## Justificativa para escolha desse banco ou biblioteca
 
-Instruções de Configuração, Compilação, e Execução:
+O MySQL foi escolhido por ser um sistema de gerenciamento de banco de dados relacional, permitindo organizar e relacionar as informações de jogadores, equipes, partidas e campeonatos.
 
-Ir colocando aqui de acordo com o andamento do projeto...
+O MySQL Connector/C permite realizar a comunicação entre a aplicação desenvolvida em C e o banco de dados, possibilitando o armazenamento e a consulta das informações.
 
-Referências utilizadas na pesquisa:
+## Estrutura de tabelas
 
-Ir colocando aqui no decorrer do projeto.....
+As principais entidades previstas para o banco de dados são:
+
+- **Jogador:** CPF ou identificador, nome completo, apelido, conta Steam, telefone e função.
+- **Equipe:** identificador, nome, jogadores associados, quantidade de jogadores e pontuação.
+- **Partida:** identificador, equipes participantes, número da rodada e jogo relacionado.
+- **Jogo:** identificador, nome, desenvolvedora e tipo de jogo.
+- **Critérios de pontuação:** vitórias, derrotas, empates, eliminações, mortes e dados de desempenho.
+- **Campeonato:** nome, quantidade de partidas, quantidade de equipes, formato e partidas associadas.
+
+## Instruções de configuração, compilação e execução
+
+As instruções de configuração, compilação e execução serão atualizadas de acordo com a estrutura final do projeto e a integração com o banco de dados MySQL.
+
+## Testes
+
+Serão realizados testes para verificar o funcionamento das principais funcionalidades do sistema, incluindo:
+
+- Busca de jogadores existentes e inexistentes pelo nickname.
+- Busca de equipes existentes e inexistentes pelo nome.
+- Validação de entradas numéricas.
+- Validação de campos de texto vazios.
+- Verificação de valores fora dos limites permitidos.
+- Verificação dos cadastros e consultas após a integração dos módulos.
+
+## Referências utilizadas na pesquisa
+
+- Documentação oficial da linguagem C.
+- Documentação oficial do MySQL.
+- Documentação do MySQL Connector/C.
